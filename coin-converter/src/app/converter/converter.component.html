@@ -1,0 +1,17 @@
+<section>
+    <h1>Conversor de Moedas</h1>
+    <form>
+        <label for="baseCoin">Digite o codigo da moeda base</label>
+        <input type="text" placeholder="---" id="baseCoin" #baseCoin>
+        <br>
+        <label for="targetCoin">Digite o codido da moeda alvo</label>
+        <input type="text" placeholder="---" id="targetCoin" #targetCoin>
+        <br>
+        <label for="money">Digite o valor a ser convertido</label>
+        <input type="text" placeholder="-" id="money" #money>
+        <br>
+        <button type="button" (click)="coinConverter(baseCoin.value,targetCoin.value,money.value)">Converter!</button>
+        <br>
+        <p>Resultado = {{money_value}}</p>
+    </form>
+</section>

@@ -1,0 +1,28 @@
+/* Define a largura da borda da tabela e a largura da borda das células */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  /* Define a cor de fundo das células do cabeçalho */
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Define o espaçamento interno das células */
+  td, th {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Define a cor de fundo das linhas alternadas da tabela */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Define a cor de fundo das células quando passar o mouse por cima */
+  tr:hover {
+    background-color: #ddd;
+  }
+  

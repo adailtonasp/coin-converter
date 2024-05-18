@@ -1,0 +1,13 @@
+<main>
+  <header>
+    <a [routerLink]="['/']">
+      <img src="../assets/img/dollar.png" alt="simbolo do dolar ">
+    </a>
+    <a [routerLink]="['/listar']" href="#">Listar Moedas</a>
+    <a [routerLink]="['/converter']" href="#">Converter</a>
+    <a [routerLink]="['/historico']" href="#">Historico</a>
+  </header>
+</main>
+<section>
+  <router-outlet></router-outlet>
+</section>
