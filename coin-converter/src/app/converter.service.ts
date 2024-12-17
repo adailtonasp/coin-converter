@@ -67,4 +67,19 @@ export class ConverterService {
 
   }
 
+  getAllHistory() : HistoryElement[]{
+    const historyList : HistoryElement[]= [];
+
+    for(let i = 0; i < this.storage.length;i++){
+      const key = this.storage.key(i);
+      
+      const value = this.storage.getItem(key!);
+        
+      historyList.push(JSON.parse(value!));
+
+    }
+
+    return historyList;
+  }
+  
 }

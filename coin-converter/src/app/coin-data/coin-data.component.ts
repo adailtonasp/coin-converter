@@ -10,5 +10,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './coin-data.component.css'
 })
 export class CoinDataComponent {
-  @Input() coinData! : Coin;
+  @Input() coinData! : Coin;  
 }

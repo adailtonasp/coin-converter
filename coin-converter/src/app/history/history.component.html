@@ -1,1 +1,8 @@
-<p>history works!</p>
+<section class="results">
+    <table>
+      <app-history-data
+        *ngFor="let elementHistory of historyList"
+           [historyData]="elementHistory">
+      </app-history-data>
+    </table>
+  </section>

@@ -13,7 +13,7 @@ export class ConverterComponent {
 
   private converterService : ConverterService = inject(ConverterService);
 
-  private money_value = 0; 
+  protected money_value = 0; 
 
   constructor() {}
 
@@ -24,11 +24,12 @@ export class ConverterComponent {
       console.log("Erro ao converter para float!");
     }
 
-    const convertionRate = this.converterService.coinConverter(baseCoin,targetCoin)?.conversion_rate;
+    const convertionRate = this.converterService.coinConverter(baseCoin,targetCoin)!.conversion_rate;
     
     if(convertionRate){
       this.money_value = money_number * convertionRate;
-    } 
-  }
 
+      this.converterService.saveHistory(money_number,baseCoin,targetCoin,this.money_value,convertionRate)
+    }
+  }
 }
